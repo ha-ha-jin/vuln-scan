@@ -47,4 +47,4 @@ def full_port_scan(ip):
 
 
 if __name__ == '__main__':
-    print(full_port_scan('192.168.38.153'))
+    pass
