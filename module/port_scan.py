@@ -27,34 +27,11 @@ def scan_port_tcp(host, port):
         active_port_list.append(port)
 
 
-def scan_port_syn(host, port):
-    try:
-        pkg = IP(dst=host) / TCP(dport=port)
-        reply = sr1(pkg, timeout=1, verbose=False)
-        if reply[TCP].flags == 'SA':
-            active_port_list.append(port)
-    except Exception as e:
-        pass
-
-
 def full_port_scan(ip):
     active_port_list.clear()
 
     for port in range(0, 65536):
         th = threading.Thread(target=scan_port_tcp, args=(ip, port))
-        th.start()
-
-    th.join()
-    active_port_list.sort()
-
-    return active_port_list
-
-
-def full_port_scan_syn(ip):
-    active_port_list.clear()
-
-    for port in range(0, 65536):
-        th = threading.Thread(target=scan_port_syn, args=(ip, port))
         th.start()
 
     th.join()
