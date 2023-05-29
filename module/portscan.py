@@ -42,7 +42,6 @@ def full_port_scan(ip):
     for port in range(0, 65536):
         th = threading.Thread(target=scan_port_tcp, args=(ip, port))
         th.start()
-
     return port_list
 
 
