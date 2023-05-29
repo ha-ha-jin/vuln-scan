@@ -9,6 +9,8 @@ import requests,threading
 
 url_code_list={}
 
+print("cjznb")
+
 def readuri(domain,file):
     with open(file,'r') as f:
         uris=f.readlines()
