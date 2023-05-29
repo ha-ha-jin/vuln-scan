@@ -2,10 +2,8 @@
 # -*- coding: utf-8 -*-
 # @Project : vuln-scan
 # @IDE: PyCharm 2022.3.2
-# @Time : 2023/5/29 20:49
+# @Time : 2023/5/29 20:50
 # @Author : jin
 # @Email : 295588728@qq.com
-# @File : 111
+# @File : 123456
 # @Description :
-
-print(11111111)
