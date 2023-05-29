@@ -2,7 +2,7 @@
 # @Time : 2023/5/29 19:58
 # @Author : 89261
 # @Email : 892612337@qq.com
-# @File : portscan.py
+# @File : port_scan.py
 # @Project : vuln-scan
 # @脚本说明 :
 import socket
