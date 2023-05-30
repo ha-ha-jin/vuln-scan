@@ -7,14 +7,13 @@
 # @脚本说明 :
 import socket
 import threading
-from scapy.layers.inet import TCP, IP
-from scapy.sendrecv import sr1
 import logging
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 active_port_list = []
 
 
+# tcp全连接扫描
 def scan_port_tcp(host, port):
     sock = socket.socket()
     try:
@@ -27,6 +26,7 @@ def scan_port_tcp(host, port):
         active_port_list.append(port)
 
 
+# 全端口扫描
 def full_port_scan(ip):
     active_port_list.clear()
 
@@ -40,7 +40,14 @@ def full_port_scan(ip):
     return active_port_list
 
 
+# 指定端口扫描
 def port_scan(ip, port_list):
+
+    """
+    :param ip: ip address
+    :param port_list: 端口列表，类型是list
+    """
+
     active_port_list.clear()
 
     for port in port_list:
