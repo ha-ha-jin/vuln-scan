@@ -9,6 +9,7 @@ import socket
 import threading
 import logging
 
+
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 active_port_list = []
 
